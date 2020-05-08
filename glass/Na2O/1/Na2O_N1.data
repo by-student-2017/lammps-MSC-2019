@@ -1,0 +1,32 @@
+molecular system: 
+3 atoms
+0 bonds
+0 angles
+0 dihedrals
+0 impropers
+2 atom types
+0 bond types
+0 angle types
+0 dihedral types
+0 improper types
+
+0.0 3.7195270951452977 xlo xhi
+0.0 3.7195270951452977 ylo yhi
+0.0 3.7195270951452977 zlo zhi
+
+Masses
+
+     1  22.989768 # Na   Na   
+     2  15.999400 # O    O    
+
+Atoms
+
+     1      1      1   0.472500   1.859764   0.000000   1.859764 # Na
+     2      2      1   0.472500   0.000000   1.859764   1.859764 # Na
+     3      3      2  -0.945000   1.859764   1.859764   1.859764 # O
+
+PairIJ Coeffs
+
+  1   1         0.000000     1.000000         0.000000 # Na-Na
+  1   2   2774271.480436     0.170000         0.000000 # Na-O
+  2   2    208070.476335     0.265000      1962.270404 # O-O

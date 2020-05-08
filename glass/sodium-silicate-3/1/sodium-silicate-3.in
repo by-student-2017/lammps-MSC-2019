@@ -1,0 +1,31 @@
+
+units             real
+atom_style        full
+pair_style        buck/coul/long 11.0 11.0
+read_data         sodium-silicate-3.data
+replicate         1 1 1
+kspace_style      pppm 1.0e-5
+thermo            100
+thermo_style      custom step temp etotal press vol density
+
+dump              1 all custom 10 sodium-silicate-3.lammpstrj id type element x y z
+dump_modify       1 element Si Na O sort id
+
+velocity          all create 3000 777 dist gaussian
+
+timestep          1.0
+
+fix               1 all nvt temp 3000 3000 10
+
+run               1000
+unfix             1
+
+fix               1 all npt temp 3000 3000 100 iso 1 1 1000
+run               1000
+unfix             1
+fix               1 all npt temp 3000 300 100 iso 1 1 1000
+run               3000
+unfix             1
+fix               1 all npt temp 300 300 100 iso 1 1 1000
+run               10000
+write_data        sodium-silicate-3_eq.data pair ij

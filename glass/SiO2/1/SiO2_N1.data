@@ -1,0 +1,32 @@
+molecular system: 
+3 atoms
+0 bonds
+0 angles
+0 dihedrals
+0 impropers
+2 atom types
+0 bond types
+0 angle types
+0 dihedral types
+0 improper types
+
+0.0 3.6812334236443722 xlo xhi
+0.0 3.6812334236443722 ylo yhi
+0.0 3.6812334236443722 zlo zhi
+
+Masses
+
+     1  28.085500 # Si   Si   
+     2  15.999400 # O    O    
+
+Atoms
+
+     1      1      1   1.890000   1.840617   0.000000   0.000000 # Si
+     2      2      2  -0.945000   0.000000   1.840617   1.840617 # O
+     3      3      2  -0.945000   0.000000   0.000000   0.000000 # O
+
+PairIJ Coeffs
+
+  1   1         0.000000     1.000000         0.000000 # Si-Si
+  1   2   1160086.202780     0.161000      1067.652611 # Si-O
+  2   2    208070.476335     0.265000      1962.270404 # O-O

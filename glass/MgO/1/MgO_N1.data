@@ -1,0 +1,31 @@
+molecular system: 
+2 atoms
+0 bonds
+0 angles
+0 dihedrals
+0 impropers
+2 atom types
+0 bond types
+0 angle types
+0 dihedral types
+0 improper types
+
+0.0 3.2224820582285867 xlo xhi
+0.0 3.2224820582285867 ylo yhi
+0.0 3.2224820582285867 zlo zhi
+
+Masses
+
+     1  24.305000 # Mg   Mg   
+     2  15.999400 # O    O    
+
+Atoms
+
+     1      1      1   0.945000   1.611241   1.611241   0.000000 # Mg
+     2      2      2  -0.945000   1.611241   0.000000   1.611241 # O
+
+PairIJ Coeffs
+
+  1   1         0.000000     1.000000         0.000000 # Mg-Mg
+  1   2    752987.751949     0.178000       629.114793 # Mg-O
+  2   2    208070.476335     0.265000      1962.270404 # O-O

@@ -1,0 +1,31 @@
+molecular system: 
+2 atoms
+0 bonds
+0 angles
+0 dihedrals
+0 impropers
+2 atom types
+0 bond types
+0 angle types
+0 dihedral types
+0 improper types
+
+0.0 3.597512495720671 xlo xhi
+0.0 3.597512495720671 ylo yhi
+0.0 3.597512495720671 zlo zhi
+
+Masses
+
+     1  40.078000 # Ca   Ca   
+     2  15.999400 # O    O    
+
+Atoms
+
+     1      1      1   0.945000   1.798756   0.000000   0.000000 # Ca
+     2      2      2  -0.945000   1.798756   0.000000   1.798756 # O
+
+PairIJ Coeffs
+
+  1   1         0.000000     1.000000         0.000000 # Ca-Ca
+  1   2   3589782.372087     0.178000       974.531814 # Ca-O
+  2   2    208070.476335     0.265000      1962.270404 # O-O
