@@ -8,6 +8,9 @@ kspace_style      pppm 1.0e-5
 thermo            100
 thermo_style      custom step temp etotal press vol density
 
+dump            d1 all cfg 10 cfg/run.*.cfg mass type xs ys zs id type
+dump_modify     d1 element Al O
+
 dump              1 all custom 10 Al2O3_N80.lammpstrj id type element x y z
 dump_modify       1 element Al O sort id
 
