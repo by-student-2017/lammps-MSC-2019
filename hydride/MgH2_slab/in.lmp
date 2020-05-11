@@ -4,13 +4,13 @@ clear
 
 # ----- condition settings -----
 
-variable    tempm index  873.0 # K (heat)
+variable    tempm index  1273.0 # K (heat)
 
-variable    temph index  473.0 # K (cool No.1)
+variable    temph index   873.0 # K (cool No.1)
 
-variable    tempc index  273.0 # K (cool No.2)
+variable    tempc index   273.0 # K (cool No.2)
 
-variable    pres index 0.001 # 0.0001 MPa (bar units)
+variable    pres index 1.0 # 0.1 MPa (bar units)
 
 variable    fs   index 0.0005 # 0.5 fs
 variable    ps   index 20 # 20 ps
@@ -53,10 +53,13 @@ variable        temperature equal temp
 fix             fout1 all ave/time 1 100 100 v_energy v_temperature file out_energy.txt
 
 # ----- Equilibriation (heat)-----
-# 1 eV/Angstrom = 1.60217657e-9 N
-# 1 N = 624150932.378 eV/Angstrom
+# 1 [eV/Angstrom] = 1.60217657e-9 [N]
+# 1 [N] = 101.97 [g] * 9.80665 [m/s^2]
+# 9.80665 [m/s^2] = (1/1.60217657e-9)/(101.97/6.02e-23) [(eV/Angstrom)/g]
 velocity        all create 10.0 123456
-#fix             g1 all gravity 624150932.378 vector 0 0 -1
+region          mobile block INF INF INF INF 2.4 INF
+group           mobile region mobile
+fix             g1 mobile gravity 3.6846e-16 vector 0 0 -1
 fix             f1 all nvt temp 10.0 ${tempm} ${tdamp} 
 run             ${nstep} # 20 ps
 unfix           f1
