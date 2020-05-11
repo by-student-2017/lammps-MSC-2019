@@ -6,7 +6,7 @@ set xtics 0.1
 set mxtics 5
 set ylabel "G(r)"
 set mytics 5
-plot "out_rdf.txt" u ($2/10):3 w l t "C-C", "out_rdf.txt" u ($2/10):5 w l t "H-H", "out_rdf.txt" u ($2/10):7 w l t "C-H"
+plot "out_rdf.txt" u ($2/10):3 w l t "Mg-Mg", "out_rdf.txt" u ($2/10):5 w l t "H-H", "out_rdf.txt" u ($2/10):7 w l t "Mg-H"
 
 # pause -1
 
