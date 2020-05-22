@@ -1,0 +1,77 @@
+#LAMMPS Input file
+# Title
+clear
+
+# ----- condition settings -----
+
+variable    tempm index  1273.0 # K (heat)
+
+variable    temph index   873.0 # K (cool No.1)
+
+variable    tempc index   273.0 # K (cool No.2)
+
+variable    pres index 1.0 # 0.1 MPa (bar units)
+
+variable    fs   index 0.0005 # 0.5 fs
+variable    ps   index 20 # 20 ps
+
+# -----other settings -----
+variable    nstep equal ${ps}/${fs}
+variable    nsteph equal ${ps}/${fs}
+variable    nstepc equal ${ps}/${fs}
+variable    tdamp equal ${fs}*100
+variable    pdamp equal ${fs}*1000
+
+# ----- Structure settings -----
+units metal
+atom_style atomic
+dimension     3
+boundary p p p
+read_data data
+replicate 1 1 1
+timestep ${fs}
+
+mass 1  63.5463  # Cu, cuu6.txt
+mass 2 195.0849  # Pt, ptu6.txt
+#mass 3 107.8682  # Ag, agu6.txt
+#mass 4 196.9666  # Au, auu6.txt
+#mass 5  58.6934  # Ni, niu6.txt
+#mass 6 106.42    # Pd, pdu6.txt
+
+# ----- Potential settings -----
+pair_style eam
+pair_coeff 1 1*2 ./potentials/cuu6.txt
+pair_coeff 2 1*2 ./potentials/ptu6.txt
+
+# e.g., 3 atom type settings
+#pair_coeff 1 1*3 ./potentials/cuu6.txt
+#pair_coeff 2 1*3 ./potentials/ptu6.txt
+#pair_coeff 3 1*3 ./potentials/auu6.txt
+
+# ----- Relax calculation (0 K) -----
+thermo_style    custom step etotal temp lx vol press
+thermo          10
+minimize        1.0e-10 0.0 1000 100000
+
+# ----- Output setting -----
+dump            d1 all cfg 100 cfg/run.*.cfg mass type xs ys zs id type
+dump_modify     d1 element Cu Pt
+
+# ----- Check equilibriation setting -----
+variable        energy equal etotal
+variable        temperature equal temp
+fix             fout1 all ave/time 1 100 100 v_energy v_temperature file out_energy.txt
+
+# ----- Equilibriation (heat)-----
+fix             f1 all nvt temp 10.0 ${tempm} ${tdamp} 
+run             ${nstep} # 20 ps
+unfix           f1
+
+# ----- Calculation (cool No.1)-----
+fix             f1 all nvt temp ${tempm} ${temph} ${tdamp}
+run             ${nsteph} # 20 ps
+unfix           f1
+
+# ----- Calculation (cool No.2)-----
+fix             f1 all nvt temp ${temph} ${tempc} ${tdamp}
+run             ${nstepc} # 20 ps
