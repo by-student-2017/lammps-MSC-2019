@@ -7,7 +7,7 @@ C-Cu‚ÍAl-Cu‚ðŒ³‚Éì¬‚³‚ê‚½ƒ|ƒeƒ“ƒVƒƒƒ‹‚ð—p‚¢‚Ä‚¢‚éBAl‚ª—n‚¯‚»‚¤‚È‰·“x‚Ü‚Å‚­‚ç‚
 ----------
 
 
-hydride‚ÍMgH2‚Ì—á‚ð‹LÚ‚µ‚Ä‚ ‚éBŽÀÛ‚É‚ÍQM/MM‚È‚Ç‚ð—p‚¢‚Ä‘JˆÚ‹à‘®‚È‚Ç‚ð’uŠ·‚µ‚½ŒvŽZ‚É—˜—p‚·‚é‚Ì‚ª‚æ‚¢‚¾‚ë‚¤B‚Æ‚Í‚¢‚¦AŽ„‚Ìƒm[ƒgƒpƒ\ƒRƒ“‚¾‚ÆQMMMW‚ªãŽè‚­ƒCƒ“ƒXƒg[ƒ‹‚Å‚«‚È‚¢BŽc”OB
+hydride‚ÍMgH2‚Ì—á‚ð‹LÚ‚µ‚Ä‚ ‚éBŽÀÛ‚É‚ÍQM/MM‚È‚Ç‚ð—p‚¢‚Ä‘JˆÚ‹à‘®‚È‚Ç‚ð’uŠ·‚µ‚½ŒvŽZ‚É—˜—p‚·‚é‚Ì‚ª‚æ‚¢‚¾‚ë‚¤B
 
 
 ƒXƒ‰ƒuƒ‚ƒfƒ‹islabj‚Ì—á‚Íd—Í‚ÌŒø‰Ê‚à“ü‚ê‚Ä‚Ý‚½‚ªAŽ„‚Ì“–‰‚Ì—\‘z’Ê‚è‚É‚Í‚È‚ç‚È‚©‚Á‚½‚Ì‚ÅA‚Ü‚ AŽQl’ö“x‚É‚È‚ê‚ÎK‚¢‚Å‚ ‚éB
